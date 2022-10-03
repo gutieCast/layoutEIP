@@ -1,0 +1,11 @@
+@import "../abstract/mixins";
+@import "../abstract/variables";
+
+main {
+    // background-color: black;
+    position: relative;
+    height: 200vh;
+    z-index: 2;
+    background-color: black;
+    @include noise(linear-gradient(0deg, rgba(161,247,109,1) 0%, rgba(2,0,36,0.7665265935475752) 13%), $lines: true);
+}

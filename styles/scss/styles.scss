@@ -1,0 +1,45 @@
+//variables y componentes
+@import "abstract/mixins";
+@import "abstract/variables";
+// @import "components/botones";
+// @import "components/cards";
+
+//Layout
+@import "layout/header";
+@import "layout/main";
+@import "layout/hero";
+// //index
+// @import "screens/index/hero";
+// // @import "screens/index/menu-tags";
+// // @import "screen/index/carrusel";
+
+// //Footer
+// @import "layout/footer";
+
+
+// // //pages
+// // @import "layouts/acerca-de/acerca-de";
+// // @import "layouts/educacion/educacion";
+// // @import "layouts/padres/padres";
+// // @import "layouts/multimedia/multimedia";
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+p, span {
+    font-family: $normal-font;
+    color: whitesmoke;
+}
+
+h1 > span, h2, h3 {
+    font-family: $title-font;
+    color: whitesmoke;
+}

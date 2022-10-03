@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+
+// COLOR
+$purple: #391EFF;
+$green: #A1F76D;
+$white: #FFFFFF;
+
+//MARGINS & PADDINGS
+
+$s-sm: 10px;
+$s-md: 20px;
+$s-lg: 30px;
+
+$hHeader: 50px;
+//FONTS
+
+@font-face {
+    font-family: NeueMachina;
+    src: url('../../assets/fonts/Neue-Machina-Font-Family/Neue Machina - Free for Personal Use/NeueMachina-Regular.otf');
+    font-weight: bold;
+  }
+
+$normal-font: 'Mulish', sans-serif;
+$title-font: 'NeueMachina';

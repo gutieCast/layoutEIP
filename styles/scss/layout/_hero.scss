@@ -1,0 +1,39 @@
+@import "../abstract/mixins";
+@import "../abstract/variables";
+
+.hero {
+    background-color: $purple;
+    height: 100vh;
+    position: sticky;
+    padding: $s-lg;
+    background: rgb(57,30,255);
+    @include noise(linear-gradient(17deg, rgba(57,30,255,1) 0%, rgba(0,0,0,0.2511204310825893) 84%));
+    h1 {
+        .title {
+            font-size: 14rem;
+            letter-spacing: .5rem;
+            @include textGlitch("text-glitch",17, whitesmoke, transparent, black, $green, 100vw, 100vh);
+        }
+    }
+    .scroll-down{
+        width: 2px;
+        height: 110px;
+        position: relative;
+        background: transparent;
+        animation: anim-scroll-down (1.5s ease infinite);
+        border-radius: 100%;
+        margin: 0 auto 10px; //---you can romove this line---
+    
+        &:before{
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(transparent, $green, transparent);
+        }
+    }
+    
+
+}

@@ -1,0 +1,12 @@
+@import "../abstract/mixins";
+@import "../abstract/variables";
+
+header {
+    background-color: black;
+    left: s-sm;
+    height: $hHeader;
+    // .subtitle {
+    //     font-size: 7rem;
+    //     padding: 0 $s-lg;
+    // }
+}
