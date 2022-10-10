@@ -2,38 +2,60 @@
 @import "../abstract/variables";
 
 .hero {
-    background-color: $purple;
-    height: 100vh;
-    position: sticky;
-    padding: $s-lg;
-    background: rgb(57,30,255);
-    @include noise(linear-gradient(17deg, rgba(57,30,255,1) 0%, rgba(0,0,0,0.2511204310825893) 84%));
-    h1 {
-        .title {
-            font-size: 14rem;
-            letter-spacing: .5rem;
-            @include textGlitch("text-glitch",17, whitesmoke, transparent, black, $green, 100vw, 100vh);
-        }
+  background: url("../../assets/svg/circuit1.svg") rgb(57, 30, 255);
+  z-index: 3;
+  justify-content: space-between;
+  @include noise(
+    linear-gradient(
+      17deg,
+      rgba(57, 30, 255, 1) 0%,
+      rgba(0, 0, 0, 0.2511204310825893) 84%
+    ), $lines: false
+  );
+}
+.main-title {
+  flex: 0 1 auto;
+  margin-top: 30vh;
+  h1 {
+    .title {
+      font-size: $font-size-l;
+      letter-spacing: 0.5rem;
+      @include textGlitch(
+        "text-glitch",
+        17,
+        whitesmoke,
+        transparent,
+        black,
+        $green,
+        100vw,
+        100vh
+      );
+      @include b-md {
+        font-size: $font-size-xl;
+      }
     }
-    .scroll-down{
-        width: 2px;
-        height: 110px;
-        position: relative;
-        background: transparent;
-        animation: anim-scroll-down (1.5s ease infinite);
-        border-radius: 100%;
-        margin: 0 auto 10px; //---you can romove this line---
-    
-        &:before{
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(transparent, $green, transparent);
-        }
-    }
-    
+  }
+}
+.mouse {
+  width: 25px;
+  height: 40px;
+  border: 1px solid $green;
+  border-radius: 35px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto 5vh;
+  flex-shrink: 0;
 
+  &:before{
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 0;
+      width: 2px;
+      height: 60%;
+      background: linear-gradient(transparent, $green, transparent);
+      transform: translateX(-50%);
+      animation: anim-scroll-down 1.5s ease infinite;
+  }
 }

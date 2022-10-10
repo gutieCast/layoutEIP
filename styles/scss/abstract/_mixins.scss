@@ -1,7 +1,7 @@
 @import "./variables";
 
 @mixin b-sm {
-    @media only screen and (min-width: 576px) {
+    @media only screen and (max-width: 576px) {
         @content;
     }
 }
@@ -75,40 +75,54 @@
   }
 }
 
-@mixin noise ($background, $lines: false, ) {
+@mixin noise ($background, $lines: false) {
   position: relative;
   &::before,
   &::after {
     content: '';
     position: absolute;
     top: 0; left: 0; bottom: 0; right: 0;
+    z-index: -1;
   }
   &::before {
     background: $background, url(../../assets/svg/noise.svg);
   }
   @if $lines {
     &::after {
-      background: url('../../assets/svg/lines-noise.svg'), space; 
       opacity: .3;
+      @include b-sm {
+        background: url('../../assets/svg/lines-noise.svg') right/cover space;
+      }
+      @include b-md {
+        background: url('../../assets/svg/lines-noise.svg'), space; 
+      }
     }
   }
 }
 
-@keyframes anim-scroll-down{
+@keyframes anim-scroll-down {
   0%{
-      transform-origin: top;
-      transform: scaleY(0);
+    transform: translate(-50%, 0px);
+    opacity: 0;
   }
-  45%{
-      transform-origin: top;
-      transform: scaleY(1);
-  }
-  55%{
-      transform-origin: bottom;
-      transform: scaleY(1);
+  50%{
+      transform: translate(-50%, 8px);
+      opacity: 1;
   }
   100%{
-      transform-origin: bottom;
-      transform: scaleY(0);
+      transform: translate(-50%, 16px);
+      opacity: 0;
+  }
+}
+
+@keyframes content-animation {
+  0% {
+    top: 50vh;
+  }
+  20% {
+    top: 20vh;
+  }
+  100% {
+    top: 50vh;
   }
 }

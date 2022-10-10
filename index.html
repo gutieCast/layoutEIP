@@ -5,21 +5,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/css/styles.css">
-    <script src="https://unpkg.com/typewriter-effect@2.3.1/dist/core.js"></script>
+    <!-- <script src="scripts/typewriter.js"></script> -->
     <title>joan villanueva</title>
 </head>
 <body>
-    <header>
+    <header class="main-header">
+        <nav class="nav-menu">
+            <div class="menu-button-box">
+                <a class="menu-button" id="menu-button-toggle" href="#">
+                    <span></span>
+                </a>
+            </div>
+            <i class="menu-background top"></i>
+            <i class="menu-background middle"></i>
+            <i class="menu-background bottom"></i>
+            <ul class="main-menu">
+                <li class="menu-item"><a class="link-menu">Sobre mí</a></li>
+                <li class="menu-item"><a class="link-menu">Portafolio</a></li>
+                <li class="menu-item"><a class="link-menu">Contacto</a></li>
+            </ul>
+        </nav>
     </header>
-    <section class="hero" id="hero">
-        <h1>
-            <span class="title" data-text="joan villanueva">joan villanueva</span>
-        </h1>
-        <!-- <p class="subtitle">Yo <span class="loopPhrases"></span></p> -->
-        <div class="scroll-down"></div>
-    </section>
     <main>
+        <section class="section hero" id="hero">
+            <div class="section-content">
+                <div class="main-title">
+                    <h1>
+                        <span class="title" data-text="joan villanueva">joan villanueva</span>
+                    </h1>
+                </div>
+            </div>
+            <!-- <p class="subtitle">Yo <span class="loopPhrases"></span></p> -->
+            <div class="mouse"></div>
+        </section>
+        <section class="section parallax-img"></section>
+        <section class="section">
+            <header class="section-header">
+                <h3 class="section-title">sobre mí_</h3>
+            </header>
+            <div class="section-content" data-content>
+                <p>Joan Villanueva (La Paz, Bolivia). Nació en San Petersburgo, el año de 1992. Es poeta y redactora creativa. Investiga sobre poesía y planea hacerla más accesible al público. Impartió los talleres de poesía_lésbica organizados por la Red de Lesbianas Bolivia (Red LB), “Rajadura”, junto a Ros Amils, con quien también edita una pequeña antología de escritura lésbica en Bolivia. Actualmente se dedica a la construcción de una vida alrededor de la escritura.</p>
+            </div>
+        </section>
+        <section class="section">
+            <header class="section-header">
+                <h3 class="section-title">publicaciones_</h3>
+            </header>
+            <div class="section-content" data-content>
+                <ul>
+                    <li>Cazar la sombra. (2022). Próxima publicación.</li>
+                    <li>La trama artificial. (2022). Poemario Ganador del Premio de Poesía de la Fundación del Banco Central de Bolivia</li>
+                    <li>Preguntas. (2018). Plaquette</li>
+                    <li>Sin motivo. (2017). Plaquette</li>
+                    <li>Para envenenar a Escorpio. (2015). Plaquette dedicado a Daniela</li>
+                </ul>
+            </div>
+            
+        </section>
     </main>
-    <script src="scripts/typewriter.js"></script>
+    <script src="scripts/button-menu.js"></script>
+<script src="scripts/scroll-behaviour.js"></script>
+<script src="https://unpkg.com/typewriter-effect@2.3.1/dist/core.js"></script>
+
 </body>
 </html>

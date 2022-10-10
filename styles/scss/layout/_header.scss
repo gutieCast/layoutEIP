@@ -1,12 +1,268 @@
 @import "../abstract/mixins";
 @import "../abstract/variables";
 
-header {
+.main-header {
+    background-color: transparent;
+    display: flex;
+    justify-content: end;
+    .nav-open & {
+        max-height: 100vh;
+    }
+    @include b-md {
+        height: $hHeader;
+        width: 50%;
+        align-self: end;
+        display: flex;
+        position: absolute;
+        right: 0;
+    }
+}
+
+.nav-menu {
+    align-items: center;
+    padding: 0 20px;
+    display: inline-block;
+    @include b-md {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        z-index: 4;
+    }
+}
+
+.menu-button-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.menu-button {
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+    position: absolute;
+    top: #{$hHeader/2};
+    transform: translate(0, -50%);
+    transition: opacity 0.3s 0.3s;
+    z-index: 9;
+    span {
+        display: flex;
+        align-items: flex-end;
+        width: 100%;
+        height: 2.5px;
+        position: absolute;
+        top: 50%;
+        background-color: $white;
+        transform: translate(0, -50%);
+        transition: opacity 0.3s 0.3s;
+    }
+    &::before,
+    &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 2px;
+        position: absolute;
+        background-color: $white;
+        transition: transform 0.3s, top 0.3s 0.3s, bottom 0.3s 0.3s;
+    }
+    &::before {
+        top: 7px;
+    }
+    &::after {
+        bottom: 7px;
+    }
+    .nav-open & {
+        span {
+        opacity: 0;
+        transition: opacity 0.3s;
+        }
+        &::before,
+        &::after {
+        background-color: $white;
+        transition: top 0.3s, bottom 0.3s, transform 0.3s 0.3s;
+        }
+        &::before {
+            top: calc(50% - 1px);
+            transform: rotate(45deg);
+        }
+        &::after {
+            bottom: calc(50% - 1px);
+            transform: rotate(-45deg);
+        }
+    }
+    @include b-md {
+        display: none;
+    }
+}
+
+.menu-background {
+    display: none;
+    width: 300%;
+    height: 400px;
+    position: absolute;
+    left: -130%;
     background-color: black;
-    left: s-sm;
-    height: $hHeader;
-    // .subtitle {
-    //     font-size: 7rem;
-    //     padding: 0 $s-lg;
-    // }
+    transition: background-position 0.5s, transform 0.5s 0.5s, visibility 0.5s 1s;
+    z-index: 4;
+    .nav-open & {
+        background-size: 100%;
+        display: flow-root;
+        transition: background-position 0.5s, transform 0.5s 0.5s;
+        z-index: 5;
+        overflow-y: hidden;
+    }
+    &.top {
+        transform: rotate(-45deg) translateY(-150%);
+        background: linear-gradient(to top, $green 50%, $purple 50%);;
+        background-size: 100% 200%;
+        background-position: -100% 100%;
+        .nav-open & {
+        transform: rotate(-45deg) translateY(-49%);
+        background-position: 0 0;
+        overflow: hidden;
+        }
+    }
+    &.middle {
+        transform: rotate(-45deg) translateY(50%) scaleY(0);
+        background: $purple;
+        .nav-open & {
+        transform: rotate(-45deg) translateY(50%) scaleY(1);
+        overflow: hidden;
+        }
+    }
+    &.bottom {
+        transform: rotate(-45deg) translateY(250%);
+        background: linear-gradient(to bottom, $purple 50%, $green 50%);
+        background-size: 100% 200%;
+        background-position: 0 -100%;
+        .nav-open & {
+        transform: rotate(-45deg) translateY(149%);
+        background-position: 0 0;
+        overflow: hidden;
+        }
+    }
+}
+
+.main-menu {
+    display: none;
+    .nav-open & {
+        align-items: flex-start;
+        display: flex;
+        font-size: $font-size-l;
+        flex-direction: column;
+        margin: 0 20px;
+        opacity: 1;
+        overflow-y: hidden;
+        transition: opacity ease 2s;
+        width: 100vw;
+        height: 100vh;
+    }
+    @include b-md {
+        align-items: center;
+        background-color: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+    .nav-open & {
+        position: fixed;
+        z-index: 5;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        top: 0; right: 0; bottom: 0; left: 0;
+        padding: 100px 50px;
+    }
+}    
+        
+.menu-item {
+    @include b-sm {
+        opacity: 0;
+        margin: 30px 10px;
+        transition: opacity ease-in-out 2s;
+        $time-offset-close: 0;
+        @for $i from 3 through 3 {
+            &:nth-child(#{$i}n) {
+                transform: translateX(20px);
+        		$time-offset-close: $time-offset-close + 0.5;
+        		transition-delay: #{$time-offset-close}s;
+        	}
+        }
+        .nav-open & {
+            backface-visibility: hidden;
+            opacity: 1;
+            transition: opacity ease-in-out 2s;
+            $time-offset-open: 1;
+            @for $i from 3 through 3 {
+            	&:nth-child(#{$i}n) {
+            		transform: translateX(0);
+            		$time-offset-open: $time-offset-open + 0.5;
+            	transition-delay: #{$time-offset-open}s;
+            	}
+            }
+        }
+    }
+    @include b-md {
+        opacity: 1;
+        margin: 0;
+    }
+}
+
+.link-menu  {
+    display: inline-block;
+    font-family: $font-normal;
+    font-size: $font-size-normal;
+    font-weight: bolder;
+    line-height: 40px;
+    text-transform: uppercase;
+    @include b-sm {
+        opacity: 0;
+        transition: opacity ease-in-out 2s;
+        $time-offset-close: 0;
+        @for $i from 1 through 3 {
+            &:nth-child(#{$i}n) {
+                transform: translateX(20px);
+                $time-offset-close: $time-offset-close + 0.5;
+                transition-delay: #{$time-offset-close}s;
+            }
+        }
+    }
+    .nav-open & {
+        display: block;
+        color: whitesmoke;
+        opacity: 1;
+        text-align: start;
+        transition: opacity ease-in-out 2s;
+        @include b-sm {
+            $time-offset-close: 1;
+            @for $i from 1 through 3 {
+                &:nth-child(#{$i}n) {
+                    transform: translateX(20px);
+                    $time-offset-close: $time-offset-close + 0.5;
+                    transition-delay: #{$time-offset-close}s;
+                }
+            }
+        }
+    }	
+    @include b-md {
+        padding: 0 15px;
+        &:hover {
+            color: $green;
+            transition: all ease-in-out .5s;
+          }
+          &:active {
+            text-decoration: line-through;
+          }
+    }
+    @include b-lg {
+        margin: 0 5px;
+    }
+    @include b-xl {
+        font-size: $font-size-normal;
+        margin: 0 5px;
+    }
 }
