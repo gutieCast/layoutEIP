@@ -20,11 +20,5 @@ const handleIntersection = (entries) => {
 const observer = new IntersectionObserver(handleIntersection, options);
 
 sections.forEach((section, index) => {
-  // const sectionChildren = [...section.getElementsByClassName("section-content").children];
-
-  // sectionChildren.forEach((el, index) => {
-  //   el.style.setProperty("--delay", `${index * 250}ms`);
-  // });
-
   observer.observe(section);
 });

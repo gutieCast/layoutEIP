@@ -31,8 +31,47 @@
     }
 }
 
+@mixin noise ($background, $lines: false) {
+  position: relative;
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    opacity: .8;
+    transition: opacity 0.5s easy-in-out;
+    z-index: -1;
+  }
+  &::before {
+    background: $background, url(../../assets/svg/noise.svg);
+  }
+  @if $lines {
+    &::after {
+      opacity: .3;
+      @include b-sm {
+        background: url('../../assets/svg/lines-noise.svg') space center/cover;
+      }
+      @include b-md {
+        background: url('../../assets/svg/lines-noise.svg'), space; 
+      }
+    }
+  }
+}
 
-@mixin textGlitch($name, $intensity, $textColor, $background, $highlightColor1, $highlightColor2, $width, $height) {
+@mixin purpleBg ($z-index, $opacity: false) {
+  background: #391eff url("../../assets/svg/circuit.svg") space center/cover;
+  opacity: $opacity;
+  z-index: $z-index;
+  @include noise(
+    linear-gradient(
+      17deg,
+      rgba(57, 30, 255, 1) 0%,
+      rgba(0, 0, 0, 0.2511204310825893) 84%
+    ), $lines: false
+  );
+}
+
+@mixin textGlitch($name, $background, $textColor, $intensity, $highlightColor1, $highlightColor2, $width, $height) {
   // Copyright (c) 2022 by Lucas Bebber (https://codepen.io/lbebber/pen/nqwBKK)  
   color: $textColor;
   position: relative;
@@ -62,6 +101,7 @@
     left: 0;
     min-width: 100%;
     background: $background;
+    // @include purpleBg(3);
   }
   &::after {
     left: 2px;
@@ -75,28 +115,9 @@
   }
 }
 
-@mixin noise ($background, $lines: false) {
-  position: relative;
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; bottom: 0; right: 0;
-    z-index: -1;
-  }
-  &::before {
-    background: $background, url(../../assets/svg/noise.svg);
-  }
-  @if $lines {
-    &::after {
-      opacity: .3;
-      @include b-sm {
-        background: url('../../assets/svg/lines-noise.svg') right/cover space;
-      }
-      @include b-md {
-        background: url('../../assets/svg/lines-noise.svg'), space; 
-      }
-    }
+@keyframes blinker{
+  50%{
+    opacity: 0;
   }
 }
 
@@ -124,5 +145,16 @@
   }
   100% {
     top: 50vh;
+  }
+}
+
+@keyframes menuBg-animation {
+  0% {
+    top: -100%;
+    right: 0;
+  }
+  100% {
+    top: 0;
+    left: 0;
   }
 }

@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/css/styles.css">
-    <!-- <script src="scripts/typewriter.js"></script> -->
     <title>joan villanueva</title>
 </head>
 <body>
@@ -16,11 +15,8 @@
                     <span></span>
                 </a>
             </div>
-            <i class="menu-background top"></i>
-            <i class="menu-background middle"></i>
-            <i class="menu-background bottom"></i>
             <ul class="main-menu">
-                <li class="menu-item"><a class="link-menu">Sobre mí</a></li>
+                <li class="menu-item"><a class="link-menu" href="#about-me">Sobre mí</a></li>
                 <li class="menu-item"><a class="link-menu">Portafolio</a></li>
                 <li class="menu-item"><a class="link-menu">Contacto</a></li>
             </ul>
@@ -28,23 +24,32 @@
     </header>
     <main>
         <section class="section hero" id="hero">
-            <div class="section-content">
-                <div class="main-title">
-                    <h1>
-                        <span class="title" data-text="joan villanueva">joan villanueva</span>
-                    </h1>
-                </div>
+            <div class="main-title">
+                <span class="title russian-name" data-text="Джоан"></span>
+                <h1>
+                    <span class="title" data-text="joan villanueva">joan villanueva</span> <br>
+                </h1>
             </div>
-            <!-- <p class="subtitle">Yo <span class="loopPhrases"></span></p> -->
             <div class="mouse"></div>
         </section>
-        <section class="section parallax-img"></section>
+        <section class="section parallax">
+            <div class="section-content --parallax-img" data-content="">
+                <p id="type-animation"></p>
+            </div>
+        </section>
         <section class="section">
             <header class="section-header">
                 <h3 class="section-title">sobre mí_</h3>
             </header>
-            <div class="section-content" data-content>
-                <p>Joan Villanueva (La Paz, Bolivia). Nació en San Petersburgo, el año de 1992. Es poeta y redactora creativa. Investiga sobre poesía y planea hacerla más accesible al público. Impartió los talleres de poesía_lésbica organizados por la Red de Lesbianas Bolivia (Red LB), “Rajadura”, junto a Ros Amils, con quien también edita una pequeña antología de escritura lésbica en Bolivia. Actualmente se dedica a la construcción de una vida alrededor de la escritura.</p>
+            <div id="about-me" class="section-content --about-me" data-content>
+                <p class="text-content">Joan Villanueva (La Paz, Bolivia). Nació en San Petersburgo, el año de 1992. Es
+                    poeta y redactora creativa. Investiga sobre poesía y planea hacerla más accesible al público.
+                    Impartió los talleres de poesía_lésbica organizados por la Red de Lesbianas Bolivia (Red LB),
+                    “Rajadura”, junto a Ros Amils, con quien también edita una pequeña antología de escritura lésbica en
+                    Bolivia. Actualmente se dedica a la construcción de una vida alrededor de la escritura.</p>
+                <div class="btn-container">
+                    <button class="button">saber más</button>
+                </div>
             </div>
         </section>
         <section class="section">
@@ -52,20 +57,22 @@
                 <h3 class="section-title">publicaciones_</h3>
             </header>
             <div class="section-content" data-content>
-                <ul>
-                    <li>Cazar la sombra. (2022). Próxima publicación.</li>
-                    <li>La trama artificial. (2022). Poemario Ganador del Premio de Poesía de la Fundación del Banco Central de Bolivia</li>
-                    <li>Preguntas. (2018). Plaquette</li>
-                    <li>Sin motivo. (2017). Plaquette</li>
-                    <li>Para envenenar a Escorpio. (2015). Plaquette dedicado a Daniela</li>
+                <ul class="grid-content">
+                    <li class="item --center">Cazar la sombra. (2022).<br>Próxima publicación.</li>
+                    <li class="item"></li>
+                    <li class="item --rigth"><a href="/pages/la-trama-artificial.html" target="_blank">La trama
+                            artificial. (2022).</a><br>Ganador del Premio de Poesía de la Fundación del Banco Central de
+                        Bolivia 2022</li>
+                    <li class="item --rigth">Preguntas. (2018).<br>Plaquette</li>
+                    <li class="item --left">Sin motivo. (2017).<br>Plaquette</li>
+                    <li class="item --left">Para envenenar a Escorpio. (2015). <br>Plaquette</li>
                 </ul>
             </div>
-            
+
         </section>
     </main>
     <script src="scripts/button-menu.js"></script>
-<script src="scripts/scroll-behaviour.js"></script>
-<script src="https://unpkg.com/typewriter-effect@2.3.1/dist/core.js"></script>
-
+    <script src="scripts/intersection-observer.js"></script>
+    <script src="scripts/typewriter.js"></script>
 </body>
 </html>

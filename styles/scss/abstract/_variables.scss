@@ -1,15 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 // COLOR
 $purple: #391EFF;
 $green: #A1F76D;
-$white: #FFFFFF;
 
 //MARGINS & PADDINGS
 
 $s-sm: 10px;
 $s-md: 20px;
 $s-lg: 30px;
+$s-xl: 15rem;
 
 $hHeader: 50px;
 //FONTS
@@ -23,10 +23,12 @@ $hHeader: 50px;
 $font-normal: 'Mulish', sans-serif;
 $font-title: 'NeueMachina';
 
-$font-size-xxs: 0.35rem;
-$font-size-xs: 0.5rem;
-$font-size-s: 0.75rem;
-$font-size-normal: 1rem;
-$font-size-l: 2rem;
-$font-size-xl: 5rem;
-$font-size-xxl: 11rem;
+$size-xxs: 0.35rem;
+$size-xs: 0.5rem;
+$size-xs: 0.75rem;
+$size-normal: 1rem;
+$size-l: 3rem;
+$size-xl: 5rem;
+$size-xxl: 11rem;
+
+$border-width: 2px;

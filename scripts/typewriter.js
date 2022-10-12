@@ -1,18 +1,27 @@
-import Typewriter from 'typewriter-effect/dist/core';
+const parallax = document.getElementsByClassName('section'[0]);
+let spaceToType = document.querySelector("#type-animation")
+const toType = ["escribo poesía. \ <br>\ escribo."];
+let textPosition = 0;
+let speed = 100;
 
-const loopPhrases = document.getElementsByClassName('loopPhrases');
-let typewriter = new Typewriter(loopPhrases, {
-    autostart: true,
-    loop: true
-});
+const delay = (ms) => {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 
-typewriter.typeString('escribo poesía.')
-    .pauseFor(2500)
-    .deleteAll()
-    .typeString('escribo ensayos.')
-    .pauseFor(2500)
-    .deleteChars(1)
-    .typeString(' y artículos.')
-    .deleteAll()
-    .typeString('estoy contruyendo una vida <strong>alrededor de la escritura</strong>.')
-    .start();
+const typewriter = async () => {
+    spaceToType.innerHTML = toType[0].substring(0, textPosition) + '<span class="blinker">\u25AE</span>';
+  
+    if (textPosition++ != toType[0].length) {
+      setTimeout(typewriter, speed);
+    } else {
+      await delay(2500);
+      textPosition = 0;
+      typewriter()
+    }
+}
+
+console.log(parallax);
+  
+
+      window.addEventListener("load", typewriter)
+

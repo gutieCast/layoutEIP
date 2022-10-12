@@ -1,19 +1,14 @@
 //variables y componentes
 @import "abstract/mixins";
 @import "abstract/variables";
-// @import "components/botones";
+@import "components/button";
 // @import "components/cards";
 
 //Layout
 @import "layout/header";
-@import "layout/main";
 @import "layout/hero";
-// //index
-// @import "screens/index/hero";
-// // @import "screens/index/menu-tags";
-// // @import "screen/index/carrusel";
-
-// //Footer
+@import "layout/main";
+@import "layout/book";
 // @import "layout/footer";
 
 // // //pages
@@ -31,7 +26,6 @@
 
 body {
   background-color: black;
-  overflow-y: hidden;
 }
 
 p,
@@ -40,14 +34,11 @@ span {
     color: whitesmoke;
 }
 
-h1 > span,
-h2,
-h3 {
-  font-family: $font-title;
-  color: whitesmoke;
-}
-
 * > li {
   color: whitesmoke;
   font-family: $font-normal;
+}
+
+* > a {
+  cursor: pointer;
 }
