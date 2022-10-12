@@ -1,6 +1,6 @@
 @import "../abstract/mixins";
 @import "../abstract/variables";
-// @import "../abstract/support";
+@import "../abstract/support";
 
 main {
   height: 100vh;
@@ -12,16 +12,6 @@ section {
   position: relative;
   display: flex;
   flex-direction: column;
-  &:not(.hero, .--poems) {
-    @include noise(
-      radial-gradient(
-        circle closest-side at 85% 25%,
-        $green 0%,
-        rgba(0, 0, 0, 0.89) 100%
-      ),
-      $lines: true
-    );
-  }
   &:not(.--poems, .--contact-form) {
     position: relative;
     scroll-snap-align: center;
@@ -96,7 +86,7 @@ section {
   }
 }
 
-.text-content, .poem, h4 {
+.text-content {
   color: whitesmoke;
   font-family: $font-normal;
   max-width: 85%;
@@ -109,44 +99,6 @@ section {
   }
 }
 
-.grid-content {
-  max-width: 85%;
-  display: grid !important;
-  grid-template: 200px 200px 200px / 1fr 1fr;
-  gap: 10px;
-  li {
-    max-width: 350px;
-    text-align: center;
-    &.item.--left {
-      justify-self: start;
-    }
-    &.item.--center {
-      justify-self: center;
-    }
-    &.item.--rigth {
-      justify-self: end;
-    }
-    &.item.--top {
-      justify-self: flex-start;
-    }
-    &.item.--bottom {
-      justify-self: flex-end;
-    }
-    a {
-      color: $green;
-      font-family: $font-normal;
-      @include b-lg {
-        transition: all .5s ease-in-out;
-        &:hover {
-          text-decoration: overline;
-          font-weight: bold;
-          transition: all .5s ease-in-out;
-        }
-      }
-    }
-  }
-}
-
 .is-visible {
   .section-content > * {
     align-items: center;
@@ -156,20 +108,6 @@ section {
     animation: content-animation 3s cubic-bezier(0.175, 0.885, 0.32, 1.275)
       forwards 1;
     transition: all 1500ms;
-  }
-  .--about-me {
-    .text-content {
-      text-align: end;
-    }
-    .btn-container {
-      display: flex;
-      align-items: end;
-      justify-content: center;
-    }
-    @include b-md {
-      display: grid;
-      grid-template: auto/1fr 1fr;
-    }
   }
 }
 

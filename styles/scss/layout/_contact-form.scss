@@ -2,6 +2,13 @@
 @import "../abstract/variables";
 
 .--contact-form {
+  @include noise(
+      radial-gradient(
+        circle closest-side at 15% 45%,
+        $green 0%,
+        rgba(0, 0, 0, 0.89) 100%
+      )
+    );
   height: auto;
   padding: 0 0 $s-lg 0;
   &::before {
@@ -32,7 +39,6 @@
       > textarea {
         color: whitesmoke;
         width: 100%;
-        border: 1px solid whitesmoke;
         padding: 20px 20px 20px 50px;
         background: transparent;
 
@@ -77,6 +83,16 @@
       textarea {
         padding: 10px;
         min-height: 100px;
+        border: 3px solid pink;
+        font-family: $font-normal;
+        text-align: left;
+      }
+      &:focus {
+        color: whitesmoke;
+        outline: 0;
+        & ~ span {
+          opacity: 1;
+        }
       }
     }
 

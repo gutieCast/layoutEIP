@@ -20,18 +20,18 @@
             <h3 class="section-title">Escríbeme_</h3>
         </header>
         <div class="section-content">
-            <p class="text-content">¿Te gusta la poesía? ¿Te gustó o te inquietó algo? ¡Hablemos!</p>
+            <p class="text-content">¿Te gusta la poesía? ¿Te gustó o te inquietó algo de lo que leíste en este sitio web? ¡Hablemos!</p>
             <form class="contact-form">
                 <div class="field-form">
                     <label for="name">Nombre *</label>
-                    <input type="text" name="name" id="name" minlength="3" placeholder="Escribe tu nombre" required />
-                    <span class="error">Tu nombre debe tener una extensión mínima de tres letras.
+                    <input type="text" name="name" id="name" minlength="4" placeholder="Escribe tu nombre" required />
+                    <span class="error">Tu nombre debe tener una extensión mínima de 4 caracteres.
                     </span>
                 </div>
     
                 <div class="field-form">
                     <label for="email">Email *</label>
-                    <input type="email" name="email" id="email" placeholder="Escribe tu email" required />
+                    <input type="email" name="email" id="email" pattern="(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i)" placeholder="Escribe tu email" required />
                     <span class="error">Debes escribir tu correo electrónico para podernos contactar</span>
                 </div>
         
@@ -49,9 +49,9 @@
     
                 <div class="field-form">
                     <label for="message">Déjame tu mensaje *</label>
-                    <textarea  name="message" id="message" required>
+                    <textarea  name="message" id="message" minlength="10" value="" required>
                     </textarea>
-                    <span class="error">Bueno... ¿qué querías decirme?</span>
+                    <span class="error">Debes llenar este campo con lo que quieres decirme :)</span>
                 </div>
                 <div class="fiel-form">
                     <button type="submit" class="button btn-form">Enviar</button>

@@ -1,7 +1,7 @@
 @import "../abstract/mixins";
 @import "../abstract/variables";
 
-.hero {
+.--hero {
   justify-content: space-between;
   @include purpleBg(3);
 }
@@ -36,7 +36,6 @@
       opacity: 0.5;
       writing-mode: vertical-rl;
       text-orientation: upright;
-      // transform: translate(50px, 0, 0);
     }
   }
 }
@@ -78,22 +77,29 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: flex;
+  justify-content: center;
+  @include b-lg {
+    background-size: contain;
+  }
   p {
-    flex-grow: 1;
     font-family: $font-normal;
-    font-size: $size-l;
-    padding: 0 $s-lg;
+    font-size: 2rem;
     margin: auto;
-    text-align: center;
     writing-mode: vertical-rl;
     text-orientation: upright;
+    @include b-md {
+     margin-top: #{$hHeader * 3};
+     flex-grow: 1;
+     display: flex;
+    }
+    @include b-lg {
+      font-size: $size-l;
+      margin-top: 0;
+      writing-mode: horizontal-tb;
+      text-orientation: sideways;
+    }
    .blinker {
     animation: blinker 1s linear infinite;
-   }
-   @include b-md {
-    writing-mode: horizontal-tb;
-    text-orientation: sideways;
    }
   }
 }

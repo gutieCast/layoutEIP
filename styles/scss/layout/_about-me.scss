@@ -1,0 +1,25 @@
+@import "../abstract/variables";
+@import "../abstract/mixins";
+
+.--about-me {
+    @include noise(
+      radial-gradient(
+        circle closest-side at 85% 25%,
+        $green 0%,
+        rgba(0, 0, 0, 0.89) 100%
+      ),
+      $lines: true
+    );
+    .text-content {
+      text-align: end;
+    }
+    .btn-container {
+      display: flex;
+      align-items: end;
+      justify-content: center;
+    }
+    @include b-md {
+      display: grid;
+      grid-template: auto/1fr 1fr;
+    }
+  }

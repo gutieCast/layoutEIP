@@ -22,3 +22,5 @@ const observer = new IntersectionObserver(handleIntersection, options);
 sections.forEach((section, index) => {
   observer.observe(section);
 });
+
+window.innerWidth >= 761 ? null : document.querySelector('#warning').classList.toggle('show');

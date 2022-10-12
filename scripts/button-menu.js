@@ -5,17 +5,12 @@ const linksMenu = [...document.getElementsByClassName('link-menu')];
    
 const navMobileToggle = () => {
     body.classList.toggle('nav-open');
-    // addMenu();
 }
 
 btn.addEventListener('click', event => {
     event.preventDefault;
     navMobileToggle();
 });
-
-const addMenu = () => {
-    nav.appendChild(ul);
-}
 
 const closeNavMobile = () => {
     body.classList.remove('nav-open')

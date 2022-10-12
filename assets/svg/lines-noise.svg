@@ -19,8 +19,8 @@
   <line stroke-linecap="undefined" stroke-linejoin="undefined" class="line-noise" id="svg_26" y2="1000" x2="685" y1="0" x1="685" stroke="#A1F76D" stroke-width="2"  fill="none"/>
   <line stroke-linecap="undefined" stroke-linejoin="undefined" class="line-noise" id="svg_26" y2="1000" x2="780" y1="0" x1="780" stroke="#FFF" fill="none"/>
   <line stroke-linecap="undefined" stroke-linejoin="undefined" class="line-noise" id="svg_26" y2="1000" x2="810" y1="0" x1="810" stroke="#FFF" fill="none"/>
-      <animate  attributeName="opacity"
+      <!-- <animate  attributeName="opacity"
                 from="0" to="1" dur="1s"
-                begin="0s;animation2.end" />
+                begin="0s;animation2.end" /> -->
  </g>
 </svg>

@@ -8,8 +8,10 @@
 @import "layout/header";
 @import "layout/hero";
 @import "layout/main";
+@import "layout/about-me";
+@import "layout/publications";
 @import "layout/poems";
-@import"layout/contact-form";
+@import "layout/contact-form";
 // @import "layout/footer";
 
 * {
@@ -24,7 +26,7 @@ body {
   background-color: black;
 }
 
-p,
+* >  p,
 span {
     font-family: $font-normal;
     color: whitesmoke;
