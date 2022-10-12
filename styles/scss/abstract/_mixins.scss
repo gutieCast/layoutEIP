@@ -31,7 +31,7 @@
     }
 }
 
-@mixin noise ($background, $lines: false) {
+@mixin noise ($background, $lines: false, $fixed: false) {
   position: relative;
   &::before,
   &::after {
@@ -39,11 +39,12 @@
     position: absolute;
     top: 0; left: 0; bottom: 0; right: 0;
     opacity: .8;
-    transition: opacity 0.5s easy-in-out;
+    transition: opacity 1s easy-in-out;
     z-index: -1;
   }
   &::before {
     background: $background, url(../../assets/svg/noise.svg);
+    background-attachment: $fixed;
   }
   @if $lines {
     &::after {
@@ -71,7 +72,7 @@
   );
 }
 
-@mixin textGlitch($name, $background, $textColor, $intensity, $highlightColor1, $highlightColor2, $width, $height) {
+@mixin textGlitch($name, $background, $textColor, $intensity, $highlightColor1, $highlightColor2) {
   // Copyright (c) 2022 by Lucas Bebber (https://codepen.io/lbebber/pen/nqwBKK)  
   color: $textColor;
   position: relative;
@@ -100,8 +101,8 @@
     top: 0;
     left: 0;
     min-width: 100%;
+    min-height: 100%;
     background: $background;
-    // @include purpleBg(3);
   }
   &::after {
     left: 2px;

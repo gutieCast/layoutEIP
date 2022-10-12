@@ -26,9 +26,7 @@
     whitesmoke,
     17,
     $purple,
-    $green,
-    100vw,
-    100vh
+    $green
   );
   @include b-md {
     font-size: $size-xl;
@@ -38,6 +36,7 @@
       opacity: 0.5;
       writing-mode: vertical-rl;
       text-orientation: upright;
+      // transform: translate(50px, 0, 0);
     }
   }
 }
@@ -64,10 +63,14 @@
       transform: translateX(-50%);
       animation: anim-scroll-down 1.5s ease infinite;
   }
+  @include b-md {
+    width: 40px;
+    height: 60px;
+  }
 }
 
 .--parallax-img {
-  background-image: url("../../assets/photos/cat-at-night.jpg");
+  background-image: url("../../assets/img/cat-at-night.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -83,8 +86,14 @@
     padding: 0 $s-lg;
     margin: auto;
     text-align: center;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
    .blinker {
     animation: blinker 1s linear infinite;
+   }
+   @include b-md {
+    writing-mode: horizontal-tb;
+    text-orientation: sideways;
    }
   }
 }

@@ -12,7 +12,7 @@ section {
   position: relative;
   display: flex;
   flex-direction: column;
-  &:not(.hero) {
+  &:not(.hero, .--poems) {
     @include noise(
       radial-gradient(
         circle closest-side at 85% 25%,
@@ -22,7 +22,7 @@ section {
       $lines: true
     );
   }
-  &:not(.--book) {
+  &:not(.--poems, .--contact-form) {
     position: relative;
     scroll-snap-align: center;
     display: flex;
@@ -69,7 +69,8 @@ section {
   }
   .section-title {
     font-family: $font-title;
-    font-size: 2rem;
+    color: whitesmoke;
+    font-size: 1.5rem;
     padding-left: 10px;
     letter-spacing: 0.03em;
   }

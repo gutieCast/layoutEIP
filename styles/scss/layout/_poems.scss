@@ -1,0 +1,69 @@
+@import "../abstract/mixins";
+@import "../abstract/variables";
+
+.--poems {
+  height: auto;
+  @include noise(
+    radial-gradient(
+      circle closest-side at 85% 10%,
+      $green 0%,
+      rgba(0, 0, 0, 0.89) 100%
+    ),
+    false,
+    fixed
+  );
+  > * {
+    color: whitesmoke;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+  .text-intro {
+    margin: $size-l;
+    font-size: $s-md;
+  }
+  .poem-container {
+    display: flex;
+    flex-direction: column;
+    margin: $size-xl 0 $size-xxl 0;
+    .poem-header {
+      width: 100%;
+      .poem-title {
+        font-family: $font-title;
+        font-size: 2rem;
+        text-align: center;
+        margin: auto;
+        display: block;
+        text-align: center;
+        margin-bottom: $size-l;
+      }
+    }
+    .--poem {
+      margin: 80 0;
+      font-family: $font-normal;
+      &.--one-column, &.--two-columns {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+      &.--all-left {
+        justify-content: flex-start;
+      }
+      &.--two-columns {
+        > * {
+          display: block;
+          margin-bottom: 30px;
+        }
+        .--v-left {
+          text-align: left;
+        }
+        .--v-right {
+          text-align: right;
+        }
+        .--v-center {
+          text-align: center;
+        }
+      }
+    }
+  }
+}

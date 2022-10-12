@@ -10,6 +10,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @font-face {
   font-family: NeueMachina;
   src: url("../../assets/fonts/Neue-Machina-Font-Family/Neue Machina - Free for Personal Use/NeueMachina-Regular.otf");
@@ -126,7 +128,7 @@
   @media only screen and (min-width: 768px) {
     .main-header {
       height: 50px;
-      width: 50%;
+      width: 53%;
       align-self: end;
       display: flex;
       position: absolute;
@@ -153,12 +155,13 @@
   display: block;
   width: 30px;
   height: 30px;
-  margin-right: 20px;
-  position: absolute;
-  top: 25px;
-  transform: translate(0, -50%);
   transition: opacity 0.3s 0.3s;
-  z-index: 9; }
+  z-index: 9;
+  position: absolute; }
+  .menu-button:not(.back) {
+    top: 25px;
+    margin-right: 20px;
+    transform: translate(0, -50%); }
   .menu-button span {
     display: flex;
     align-items: flex-end;
@@ -169,7 +172,7 @@
     background-color: whitesmoke;
     transform: translate(0, -50%);
     transition: opacity 0.3s 0.3s; }
-  .menu-button::before, .menu-button::after {
+  .menu-button:not(.back)::before, .menu-button:not(.back)::after {
     content: '';
     display: block;
     width: 100%;
@@ -177,9 +180,9 @@
     position: absolute;
     background-color: whitesmoke;
     transition: transform 0.3s, top 0.3s 0.3s, bottom 0.3s 0.3s; }
-  .menu-button::before {
+  .menu-button:not(.back)::before {
     top: 7px; }
-  .menu-button::after {
+  .menu-button:not(.back)::after {
     bottom: 7px; }
   .nav-open .menu-button span {
     opacity: 0;
@@ -194,49 +197,21 @@
     bottom: calc(50% - 1px);
     transform: rotate(-45deg); }
   @media only screen and (min-width: 768px) {
-    .menu-button {
+    .menu-button:not(.back) {
       display: none; } }
-
-.menu-background {
-  display: none;
-  width: 300%;
-  height: 400px;
-  position: absolute;
-  left: -130%;
-  background-color: black;
-  transition: background-position 0.5s, transform 0.5s 0.5s, visibility 0.5s 1s;
-  z-index: 4;
-  overflow-y: hidden; }
-  .nav-open .menu-background {
-    display: flow-root;
-    transition: background-position 0.5s, transform 0.5s 0.5s;
-    z-index: 5; }
-  .menu-background.top {
-    transform: rotate(-45deg) translateY(-150%);
-    background: linear-gradient(to top, #A1F76D 50%, #391EFF 50%);
-    background-size: 100% 200%;
-    background-position: -100% 100%; }
-    .nav-open .menu-background.top {
-      transform: rotate(-45deg) translateY(-49%);
-      background-position: 0 0; }
-  .menu-background.middle {
-    transform: rotate(-45deg) translateY(50%) scaleY(0);
-    background: #391EFF; }
-    .nav-open .menu-background.middle {
-      transform: rotate(-45deg) translateY(50%) scaleY(1); }
-  .menu-background.bottom {
-    transform: rotate(-45deg) translateY(250%);
-    background: linear-gradient(to bottom, #391EFF 50%, #A1F76D 50%);
-    background-size: 100% 200%;
-    background-position: 0 -100%; }
-    .nav-open .menu-background.bottom {
-      transform: rotate(-45deg) translateY(149%);
-      background-position: 0 0; }
+  .menu-button.back {
+    top: 12.5px;
+    right: 20px; }
+    .menu-button.back img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      filter: invert(1); }
 
 .main-menu {
   display: none;
   top: -100%;
-  animation: menuBg-animation 3s cubic-bezier(0.075, 0.82, 0.165, 1) backwards 1;
+  animation: menuBg-animation cubic-bezier(0.075, 0.82, 0.165, 1) backwards 1;
   transition: all 1500ms; }
   .nav-open .main-menu {
     background: #391eff url("../../assets/svg/circuit.svg") space center/cover;
@@ -262,10 +237,11 @@
       bottom: 0;
       right: 0;
       opacity: .8;
-      transition: opacity 0.5s easy-in-out;
+      transition: opacity 1s easy-in-out;
       z-index: -1; }
     .nav-open .main-menu::before {
-      background: linear-gradient(17deg, #391eff 0%, rgba(0, 0, 0, 0.2511204311) 84%), url(../../assets/svg/noise.svg); }
+      background: linear-gradient(17deg, #391eff 0%, rgba(0, 0, 0, 0.2511204311) 84%), url(../../assets/svg/noise.svg);
+      background-attachment: false; }
   @media only screen and (min-width: 768px) {
     .main-menu {
       align-items: center;
@@ -411,10 +387,11 @@
     bottom: 0;
     right: 0;
     opacity: .8;
-    transition: opacity 0.5s easy-in-out;
+    transition: opacity 1s easy-in-out;
     z-index: -1; }
   .hero::before {
-    background: linear-gradient(17deg, #391eff 0%, rgba(0, 0, 0, 0.2511204311) 84%), url(../../assets/svg/noise.svg); }
+    background: linear-gradient(17deg, #391eff 0%, rgba(0, 0, 0, 0.2511204311) 84%), url(../../assets/svg/noise.svg);
+    background-attachment: false; }
 
 .main-title {
   flex: 0 1 auto;
@@ -433,120 +410,121 @@
   position: relative; }
 @keyframes glitch-name-anim-1 {
   0% {
-    clip-path: inset(40% 0 52% 0);
-    clip-path: inset(40% 0 52% 0); }
+    clip-path: inset(90% 0 11% 0);
+    clip-path: inset(90% 0 11% 0); }
   5.8823529412% {
-    clip-path: inset(94% 0 2% 0);
-    clip-path: inset(94% 0 2% 0); }
+    clip-path: inset(83% 0 8% 0);
+    clip-path: inset(83% 0 8% 0); }
   11.7647058824% {
-    clip-path: inset(79% 0 17% 0);
-    clip-path: inset(79% 0 17% 0); }
+    clip-path: inset(100% 0 1% 0);
+    clip-path: inset(100% 0 1% 0); }
   17.6470588235% {
-    clip-path: inset(12% 0 6% 0);
-    clip-path: inset(12% 0 6% 0); }
+    clip-path: inset(25% 0 62% 0);
+    clip-path: inset(25% 0 62% 0); }
   23.5294117647% {
-    clip-path: inset(27% 0 56% 0);
-    clip-path: inset(27% 0 56% 0); }
+    clip-path: inset(44% 0 54% 0);
+    clip-path: inset(44% 0 54% 0); }
   29.4117647059% {
-    clip-path: inset(68% 0 1% 0);
-    clip-path: inset(68% 0 1% 0); }
+    clip-path: inset(15% 0 56% 0);
+    clip-path: inset(15% 0 56% 0); }
   35.2941176471% {
-    clip-path: inset(98% 0 1% 0);
-    clip-path: inset(98% 0 1% 0); }
+    clip-path: inset(72% 0 24% 0);
+    clip-path: inset(72% 0 24% 0); }
   41.1764705882% {
-    clip-path: inset(83% 0 4% 0);
-    clip-path: inset(83% 0 4% 0); }
+    clip-path: inset(89% 0 4% 0);
+    clip-path: inset(89% 0 4% 0); }
   47.0588235294% {
-    clip-path: inset(86% 0 11% 0);
-    clip-path: inset(86% 0 11% 0); }
+    clip-path: inset(85% 0 1% 0);
+    clip-path: inset(85% 0 1% 0); }
   52.9411764706% {
-    clip-path: inset(39% 0 49% 0);
-    clip-path: inset(39% 0 49% 0); }
+    clip-path: inset(77% 0 16% 0);
+    clip-path: inset(77% 0 16% 0); }
   58.8235294118% {
-    clip-path: inset(77% 0 1% 0);
-    clip-path: inset(77% 0 1% 0); }
+    clip-path: inset(50% 0 5% 0);
+    clip-path: inset(50% 0 5% 0); }
   64.7058823529% {
-    clip-path: inset(3% 0 86% 0);
-    clip-path: inset(3% 0 86% 0); }
+    clip-path: inset(85% 0 16% 0);
+    clip-path: inset(85% 0 16% 0); }
   70.5882352941% {
-    clip-path: inset(68% 0 18% 0);
-    clip-path: inset(68% 0 18% 0); }
+    clip-path: inset(45% 0 19% 0);
+    clip-path: inset(45% 0 19% 0); }
   76.4705882353% {
-    clip-path: inset(67% 0 7% 0);
-    clip-path: inset(67% 0 7% 0); }
+    clip-path: inset(77% 0 10% 0);
+    clip-path: inset(77% 0 10% 0); }
   82.3529411765% {
-    clip-path: inset(56% 0 2% 0);
-    clip-path: inset(56% 0 2% 0); }
+    clip-path: inset(26% 0 65% 0);
+    clip-path: inset(26% 0 65% 0); }
   88.2352941176% {
-    clip-path: inset(75% 0 6% 0);
-    clip-path: inset(75% 0 6% 0); }
+    clip-path: inset(47% 0 9% 0);
+    clip-path: inset(47% 0 9% 0); }
   94.1176470588% {
-    clip-path: inset(79% 0 4% 0);
-    clip-path: inset(79% 0 4% 0); }
+    clip-path: inset(1% 0 24% 0);
+    clip-path: inset(1% 0 24% 0); }
   100% {
-    clip-path: inset(80% 0 2% 0);
-    clip-path: inset(80% 0 2% 0); } }
+    clip-path: inset(15% 0 83% 0);
+    clip-path: inset(15% 0 83% 0); } }
 @keyframes glitch-name-anim-2 {
   0% {
-    clip-path: inset(16% 0 62% 0);
-    clip-path: inset(16% 0 62% 0); }
+    clip-path: inset(74% 0 15% 0);
+    clip-path: inset(74% 0 15% 0); }
   5.8823529412% {
-    clip-path: inset(24% 0 53% 0);
-    clip-path: inset(24% 0 53% 0); }
+    clip-path: inset(92% 0 7% 0);
+    clip-path: inset(92% 0 7% 0); }
   11.7647058824% {
-    clip-path: inset(99% 0 1% 0);
-    clip-path: inset(99% 0 1% 0); }
+    clip-path: inset(50% 0 50% 0);
+    clip-path: inset(50% 0 50% 0); }
   17.6470588235% {
-    clip-path: inset(42% 0 2% 0);
-    clip-path: inset(42% 0 2% 0); }
+    clip-path: inset(48% 0 12% 0);
+    clip-path: inset(48% 0 12% 0); }
   23.5294117647% {
-    clip-path: inset(56% 0 2% 0);
-    clip-path: inset(56% 0 2% 0); }
+    clip-path: inset(100% 0 1% 0);
+    clip-path: inset(100% 0 1% 0); }
   29.4117647059% {
-    clip-path: inset(96% 0 5% 0);
-    clip-path: inset(96% 0 5% 0); }
+    clip-path: inset(88% 0 2% 0);
+    clip-path: inset(88% 0 2% 0); }
   35.2941176471% {
-    clip-path: inset(88% 0 11% 0);
-    clip-path: inset(88% 0 11% 0); }
+    clip-path: inset(93% 0 8% 0);
+    clip-path: inset(93% 0 8% 0); }
   41.1764705882% {
-    clip-path: inset(73% 0 20% 0);
-    clip-path: inset(73% 0 20% 0); }
+    clip-path: inset(22% 0 57% 0);
+    clip-path: inset(22% 0 57% 0); }
   47.0588235294% {
-    clip-path: inset(40% 0 41% 0);
-    clip-path: inset(40% 0 41% 0); }
+    clip-path: inset(87% 0 3% 0);
+    clip-path: inset(87% 0 3% 0); }
   52.9411764706% {
-    clip-path: inset(49% 0 9% 0);
-    clip-path: inset(49% 0 9% 0); }
+    clip-path: inset(17% 0 58% 0);
+    clip-path: inset(17% 0 58% 0); }
   58.8235294118% {
-    clip-path: inset(30% 0 66% 0);
-    clip-path: inset(30% 0 66% 0); }
+    clip-path: inset(19% 0 78% 0);
+    clip-path: inset(19% 0 78% 0); }
   64.7058823529% {
-    clip-path: inset(31% 0 32% 0);
-    clip-path: inset(31% 0 32% 0); }
+    clip-path: inset(58% 0 41% 0);
+    clip-path: inset(58% 0 41% 0); }
   70.5882352941% {
-    clip-path: inset(83% 0 12% 0);
-    clip-path: inset(83% 0 12% 0); }
+    clip-path: inset(15% 0 61% 0);
+    clip-path: inset(15% 0 61% 0); }
   76.4705882353% {
-    clip-path: inset(24% 0 40% 0);
-    clip-path: inset(24% 0 40% 0); }
+    clip-path: inset(23% 0 26% 0);
+    clip-path: inset(23% 0 26% 0); }
   82.3529411765% {
-    clip-path: inset(5% 0 88% 0);
-    clip-path: inset(5% 0 88% 0); }
+    clip-path: inset(11% 0 88% 0);
+    clip-path: inset(11% 0 88% 0); }
   88.2352941176% {
-    clip-path: inset(40% 0 32% 0);
-    clip-path: inset(40% 0 32% 0); }
+    clip-path: inset(42% 0 44% 0);
+    clip-path: inset(42% 0 44% 0); }
   94.1176470588% {
-    clip-path: inset(98% 0 3% 0);
-    clip-path: inset(98% 0 3% 0); }
+    clip-path: inset(65% 0 2% 0);
+    clip-path: inset(65% 0 2% 0); }
   100% {
-    clip-path: inset(73% 0 7% 0);
-    clip-path: inset(73% 0 7% 0); } }
+    clip-path: inset(65% 0 36% 0);
+    clip-path: inset(65% 0 36% 0); } }
   .title::before, .title::after {
     content: attr(data-text);
     position: absolute;
     top: 0;
     left: 0;
     min-width: 100%;
+    min-height: 100%;
     background: transparent; }
   .title::after {
     left: 2px;
@@ -583,9 +561,13 @@
     background: linear-gradient(transparent, #A1F76D, transparent);
     transform: translateX(-50%);
     animation: anim-scroll-down 1.5s ease infinite; }
+  @media only screen and (min-width: 768px) {
+    .mouse {
+      width: 40px;
+      height: 60px; } }
 
 .--parallax-img {
-  background-image: url("../../assets/photos/cat-at-night.jpg");
+  background-image: url("../../assets/img/cat-at-night.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -600,9 +582,15 @@
     font-size: 3rem;
     padding: 0 30px;
     margin: auto;
-    text-align: center; }
+    text-align: center;
+    writing-mode: vertical-rl;
+    text-orientation: upright; }
     .--parallax-img p .blinker {
       animation: blinker 1s linear infinite; }
+    @media only screen and (min-width: 768px) {
+      .--parallax-img p {
+        writing-mode: horizontal-tb;
+        text-orientation: sideways; } }
 
 @font-face {
   font-family: NeueMachina;
@@ -648,9 +636,9 @@ section {
   position: relative;
   display: flex;
   flex-direction: column; }
-  section:not(.hero) {
+  section:not(.hero, .--poems) {
     position: relative; }
-    section:not(.hero)::before, section:not(.hero)::after {
+    section:not(.hero, .--poems)::before, section:not(.hero, .--poems)::after {
       content: '';
       position: absolute;
       top: 0;
@@ -658,19 +646,20 @@ section {
       bottom: 0;
       right: 0;
       opacity: .8;
-      transition: opacity 0.5s easy-in-out;
+      transition: opacity 1s easy-in-out;
       z-index: -1; }
-    section:not(.hero)::before {
-      background: radial-gradient(circle closest-side at 85% 25%, #A1F76D 0%, rgba(0, 0, 0, 0.89) 100%), url(../../assets/svg/noise.svg); }
-    section:not(.hero)::after {
+    section:not(.hero, .--poems)::before {
+      background: radial-gradient(circle closest-side at 85% 25%, #A1F76D 0%, rgba(0, 0, 0, 0.89) 100%), url(../../assets/svg/noise.svg);
+      background-attachment: false; }
+    section:not(.hero, .--poems)::after {
       opacity: .3; }
       @media only screen and (max-width: 576px) {
-        section:not(.hero)::after {
+        section:not(.hero, .--poems)::after {
           background: url("../../assets/svg/lines-noise.svg") space center/cover; } }
       @media only screen and (min-width: 768px) {
-        section:not(.hero)::after {
+        section:not(.hero, .--poems)::after {
           background: url("../../assets/svg/lines-noise.svg"), space; } }
-  section:not(.--book) {
+  section:not(.--poems, .--contact-form) {
     position: relative;
     scroll-snap-align: center;
     display: flex;
@@ -709,7 +698,8 @@ section {
     width: 50px; }
   .section-header .section-title {
     font-family: "NeueMachina";
-    font-size: 2rem;
+    color: whitesmoke;
+    font-size: 1.5rem;
     padding-left: 10px;
     letter-spacing: 0.03em; }
 
@@ -822,9 +812,175 @@ section {
   font-family: NeueMachina;
   src: url("../../assets/fonts/Neue-Machina-Font-Family/Neue Machina - Free for Personal Use/NeueMachina-Regular.otf");
   font-weight: bold; }
-.--book {
+.--poems {
+  height: auto;
+  position: relative; }
+  .--poems::before, .--poems::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: .8;
+    transition: opacity 1s easy-in-out;
+    z-index: -1; }
+  .--poems::before {
+    background: radial-gradient(circle closest-side at 85% 10%, #A1F76D 0%, rgba(0, 0, 0, 0.89) 100%), url(../../assets/svg/noise.svg);
+    background-attachment: fixed; }
+  .--poems > * {
+    color: whitesmoke;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%; }
+  .--poems .text-intro {
+    margin: 3rem;
+    font-size: 20px; }
+  .--poems .poem-container {
+    display: flex;
+    flex-direction: column;
+    margin: 5rem 0 11rem 0; }
+    .--poems .poem-container .poem-header {
+      width: 100%; }
+      .--poems .poem-container .poem-header .poem-title {
+        font-family: "NeueMachina";
+        font-size: 2rem;
+        text-align: center;
+        margin: auto;
+        display: block;
+        text-align: center;
+        margin-bottom: 3rem; }
+    .--poems .poem-container .--poem {
+      margin: 80 0;
+      font-family: "Mulish", sans-serif; }
+      .--poems .poem-container .--poem.--one-column, .--poems .poem-container .--poem.--two-columns {
+        display: flex;
+        flex-direction: column;
+        width: 100%; }
+      .--poems .poem-container .--poem.--all-left {
+        justify-content: flex-start; }
+      .--poems .poem-container .--poem.--two-columns > * {
+        display: block;
+        margin-bottom: 30px; }
+      .--poems .poem-container .--poem.--two-columns .--v-left {
+        text-align: left; }
+      .--poems .poem-container .--poem.--two-columns .--v-right {
+        text-align: right; }
+      .--poems .poem-container .--poem.--two-columns .--v-center {
+        text-align: center; }
+
+@font-face {
+  font-family: NeueMachina;
+  src: url("../../assets/fonts/Neue-Machina-Font-Family/Neue Machina - Free for Personal Use/NeueMachina-Regular.otf");
+  font-weight: bold; }
+@keyframes blinker {
+  50% {
+    opacity: 0; } }
+@keyframes anim-scroll-down {
+  0% {
+    transform: translate(-50%, 0px);
+    opacity: 0; }
+  50% {
+    transform: translate(-50%, 8px);
+    opacity: 1; }
+  100% {
+    transform: translate(-50%, 16px);
+    opacity: 0; } }
+@keyframes content-animation {
+  0% {
+    top: 50vh; }
+  20% {
+    top: 20vh; }
+  100% {
+    top: 50vh; } }
+@keyframes menuBg-animation {
+  0% {
+    top: -100%;
+    right: 0; }
+  100% {
+    top: 0;
+    left: 0; } }
+@font-face {
+  font-family: NeueMachina;
+  src: url("../../assets/fonts/Neue-Machina-Font-Family/Neue Machina - Free for Personal Use/NeueMachina-Regular.otf");
+  font-weight: bold; }
+.--contact-form {
+  height: auto;
+  padding: 0 0 30px 0; }
+  .--contact-form::before {
+    height: auto; }
+
+.contact-form {
+  max-width: 450px;
+  margin: 0 auto 20px;
   display: flex;
   flex-direction: column; }
+  .contact-form > div {
+    width: 100%;
+    margin: 0 10px 30px; }
+    .contact-form > div > label {
+      color: whitesmoke;
+      font-size: 1rem;
+      font-weight: bold;
+      font-family: "NeueMachina";
+      height: 119.6px; }
+    .contact-form > div > input[type="text"],
+    .contact-form > div > input[type="email"],
+    .contact-form > div > input[type="number"],
+    .contact-form > div > textarea {
+      color: whitesmoke;
+      width: 100%;
+      border: 1px solid whitesmoke;
+      padding: 20px 20px 20px 50px;
+      background: transparent; }
+      .contact-form > div > input[type="text"]::-webkit-outer-spin-button, .contact-form > div > input[type="text"]::-webkit-inner-spin-button,
+      .contact-form > div > input[type="email"]::-webkit-outer-spin-button,
+      .contact-form > div > input[type="email"]::-webkit-inner-spin-button,
+      .contact-form > div > input[type="number"]::-webkit-outer-spin-button,
+      .contact-form > div > input[type="number"]::-webkit-inner-spin-button,
+      .contact-form > div > textarea::-webkit-outer-spin-button,
+      .contact-form > div > textarea::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0; }
+      .contact-form > div > input[type="text"][type=number],
+      .contact-form > div > input[type="email"][type=number],
+      .contact-form > div > input[type="number"][type=number],
+      .contact-form > div > textarea[type=number] {
+        -moz-appearance: textfield; }
+      .contact-form > div > input[type="text"]:focus,
+      .contact-form > div > input[type="email"]:focus,
+      .contact-form > div > input[type="number"]:focus,
+      .contact-form > div > textarea:focus {
+        color: whitesmoke;
+        outline: 0; }
+      .contact-form > div > input[type="text"]:valid,
+      .contact-form > div > input[type="email"]:valid,
+      .contact-form > div > input[type="number"]:valid,
+      .contact-form > div > textarea:valid {
+        border-color: #A1F76D; }
+      .contact-form > div > input[type="text"]:invalid:not(:focus),
+      .contact-form > div > input[type="email"]:invalid:not(:focus),
+      .contact-form > div > input[type="number"]:invalid:not(:focus),
+      .contact-form > div > textarea:invalid:not(:focus) {
+        border: 3px solid pink; }
+      .contact-form > div > input[type="text"]:invalid:focus:not(:placeholder-shown) ~ .error,
+      .contact-form > div > input[type="email"]:invalid:focus:not(:placeholder-shown) ~ .error,
+      .contact-form > div > input[type="number"]:invalid:focus:not(:placeholder-shown) ~ .error,
+      .contact-form > div > textarea:invalid:focus:not(:placeholder-shown) ~ .error {
+        max-height: 200px;
+        opacity: 1; }
+    .contact-form > div .error {
+      opacity: 0;
+      color: pink;
+      min-height: 40px;
+      transition: 0.28s;
+      overflow: hidden; }
+    .contact-form > div textarea {
+      padding: 10px;
+      min-height: 100px; }
+  .contact-form .btn-form {
+    margin: 30px auto;
+    display: block; }
 
 * {
   padding: 0;
