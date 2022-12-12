@@ -19,7 +19,8 @@
 @font-face {
   font-family: NeueMachina;
   src: url("../../assets/fonts/Neue-Machina-Font-Family/Neue Machina - Free for Personal Use/NeueMachina-Regular.otf");
-  font-weight: bold; }
+  font-weight: normal;
+  font-style: normal; }
 @keyframes blinker {
   50% {
     opacity: 0; } }
@@ -50,17 +51,20 @@
 @font-face {
   font-family: NeueMachina;
   src: url("../../assets/fonts/Neue-Machina-Font-Family/Neue Machina - Free for Personal Use/NeueMachina-Regular.otf");
-  font-weight: bold; }
+  font-weight: normal;
+  font-style: normal; }
 @font-face {
   font-family: NeueMachina;
   src: url("../../assets/fonts/Neue-Machina-Font-Family/Neue Machina - Free for Personal Use/NeueMachina-Regular.otf");
-  font-weight: bold; }
+  font-weight: normal;
+  font-style: normal; }
 @font-face {
   font-family: NeueMachina;
   src: url("../../assets/fonts/Neue-Machina-Font-Family/Neue Machina - Free for Personal Use/NeueMachina-Regular.otf");
-  font-weight: bold; }
+  font-weight: normal;
+  font-style: normal; }
 .button {
-  font-family: "NeueMachina";
+  font-family: "NeueMachina", serif;
   font-weight: 600;
   border: solid 2px #A1F76D;
   outline: 0;
@@ -91,7 +95,8 @@
 @font-face {
   font-family: NeueMachina;
   src: url("../../assets/fonts/Neue-Machina-Font-Family/Neue Machina - Free for Personal Use/NeueMachina-Regular.otf");
-  font-weight: bold; }
+  font-weight: normal;
+  font-style: normal; }
 @keyframes blinker {
   50% {
     opacity: 0; } }
@@ -122,7 +127,8 @@
 @font-face {
   font-family: NeueMachina;
   src: url("../../assets/fonts/Neue-Machina-Font-Family/Neue Machina - Free for Personal Use/NeueMachina-Regular.otf");
-  font-weight: bold; }
+  font-weight: normal;
+  font-style: normal; }
 .main-header {
   background-color: transparent;
   display: flex;
@@ -220,7 +226,7 @@
     animation: menuBg-animation cubic-bezier(0.075, 0.82, 0.165, 1) backwards 1;
     transition: all 1500ms; } }
 .nav-open .main-menu {
-  background: #391eff url("../../assets/svg/circuit.svg") space center/cover;
+  background: #391eff url("../../assets/svg/circuit.svg") no-repeat center/cover;
   opacity: false;
   z-index: 5;
   position: relative;
@@ -349,7 +355,8 @@
 @font-face {
   font-family: NeueMachina;
   src: url("../../assets/fonts/Neue-Machina-Font-Family/Neue Machina - Free for Personal Use/NeueMachina-Regular.otf");
-  font-weight: bold; }
+  font-weight: normal;
+  font-style: normal; }
 @keyframes blinker {
   50% {
     opacity: 0; } }
@@ -380,10 +387,11 @@
 @font-face {
   font-family: NeueMachina;
   src: url("../../assets/fonts/Neue-Machina-Font-Family/Neue Machina - Free for Personal Use/NeueMachina-Regular.otf");
-  font-weight: bold; }
+  font-weight: normal;
+  font-style: normal; }
 .--hero {
   justify-content: space-between;
-  background: #391eff url("../../assets/svg/circuit.svg") space center/cover;
+  background: #391eff url("../../assets/svg/circuit.svg") no-repeat center/cover;
   opacity: false;
   z-index: 3;
   position: relative; }
@@ -411,121 +419,121 @@
 
 .title {
   color: whitesmoke;
-  font-family: "NeueMachina";
+  font-family: "NeueMachina", serif;
   font-size: 3rem;
   letter-spacing: 0.5rem;
   color: whitesmoke;
   position: relative; }
 @keyframes glitch-name-anim-1 {
   0% {
-    clip-path: inset(55% 0 26% 0);
-    clip-path: inset(55% 0 26% 0); }
+    clip-path: inset(86% 0 7% 0);
+    clip-path: inset(86% 0 7% 0); }
   5.8823529412% {
-    clip-path: inset(1% 0 36% 0);
-    clip-path: inset(1% 0 36% 0); }
+    clip-path: inset(35% 0 32% 0);
+    clip-path: inset(35% 0 32% 0); }
   11.7647058824% {
-    clip-path: inset(25% 0 64% 0);
-    clip-path: inset(25% 0 64% 0); }
+    clip-path: inset(31% 0 10% 0);
+    clip-path: inset(31% 0 10% 0); }
   17.6470588235% {
-    clip-path: inset(27% 0 20% 0);
-    clip-path: inset(27% 0 20% 0); }
+    clip-path: inset(97% 0 4% 0);
+    clip-path: inset(97% 0 4% 0); }
   23.5294117647% {
-    clip-path: inset(18% 0 11% 0);
-    clip-path: inset(18% 0 11% 0); }
+    clip-path: inset(40% 0 8% 0);
+    clip-path: inset(40% 0 8% 0); }
   29.4117647059% {
-    clip-path: inset(23% 0 67% 0);
-    clip-path: inset(23% 0 67% 0); }
+    clip-path: inset(59% 0 11% 0);
+    clip-path: inset(59% 0 11% 0); }
   35.2941176471% {
-    clip-path: inset(73% 0 7% 0);
-    clip-path: inset(73% 0 7% 0); }
+    clip-path: inset(65% 0 11% 0);
+    clip-path: inset(65% 0 11% 0); }
   41.1764705882% {
-    clip-path: inset(69% 0 9% 0);
-    clip-path: inset(69% 0 9% 0); }
+    clip-path: inset(58% 0 28% 0);
+    clip-path: inset(58% 0 28% 0); }
   47.0588235294% {
-    clip-path: inset(77% 0 23% 0);
-    clip-path: inset(77% 0 23% 0); }
+    clip-path: inset(58% 0 35% 0);
+    clip-path: inset(58% 0 35% 0); }
   52.9411764706% {
-    clip-path: inset(32% 0 34% 0);
-    clip-path: inset(32% 0 34% 0); }
+    clip-path: inset(15% 0 16% 0);
+    clip-path: inset(15% 0 16% 0); }
   58.8235294118% {
-    clip-path: inset(19% 0 52% 0);
-    clip-path: inset(19% 0 52% 0); }
+    clip-path: inset(36% 0 27% 0);
+    clip-path: inset(36% 0 27% 0); }
   64.7058823529% {
-    clip-path: inset(95% 0 4% 0);
-    clip-path: inset(95% 0 4% 0); }
+    clip-path: inset(86% 0 12% 0);
+    clip-path: inset(86% 0 12% 0); }
   70.5882352941% {
-    clip-path: inset(14% 0 47% 0);
-    clip-path: inset(14% 0 47% 0); }
+    clip-path: inset(10% 0 61% 0);
+    clip-path: inset(10% 0 61% 0); }
   76.4705882353% {
-    clip-path: inset(39% 0 60% 0);
-    clip-path: inset(39% 0 60% 0); }
+    clip-path: inset(88% 0 3% 0);
+    clip-path: inset(88% 0 3% 0); }
   82.3529411765% {
-    clip-path: inset(16% 0 59% 0);
-    clip-path: inset(16% 0 59% 0); }
+    clip-path: inset(28% 0 23% 0);
+    clip-path: inset(28% 0 23% 0); }
   88.2352941176% {
-    clip-path: inset(71% 0 3% 0);
-    clip-path: inset(71% 0 3% 0); }
+    clip-path: inset(55% 0 36% 0);
+    clip-path: inset(55% 0 36% 0); }
   94.1176470588% {
-    clip-path: inset(20% 0 39% 0);
-    clip-path: inset(20% 0 39% 0); }
+    clip-path: inset(96% 0 4% 0);
+    clip-path: inset(96% 0 4% 0); }
   100% {
-    clip-path: inset(35% 0 29% 0);
-    clip-path: inset(35% 0 29% 0); } }
+    clip-path: inset(76% 0 13% 0);
+    clip-path: inset(76% 0 13% 0); } }
 @keyframes glitch-name-anim-2 {
   0% {
-    clip-path: inset(87% 0 2% 0);
-    clip-path: inset(87% 0 2% 0); }
+    clip-path: inset(52% 0 47% 0);
+    clip-path: inset(52% 0 47% 0); }
   5.8823529412% {
-    clip-path: inset(91% 0 9% 0);
-    clip-path: inset(91% 0 9% 0); }
+    clip-path: inset(7% 0 82% 0);
+    clip-path: inset(7% 0 82% 0); }
   11.7647058824% {
-    clip-path: inset(36% 0 56% 0);
-    clip-path: inset(36% 0 56% 0); }
+    clip-path: inset(44% 0 45% 0);
+    clip-path: inset(44% 0 45% 0); }
   17.6470588235% {
-    clip-path: inset(16% 0 72% 0);
-    clip-path: inset(16% 0 72% 0); }
+    clip-path: inset(32% 0 51% 0);
+    clip-path: inset(32% 0 51% 0); }
   23.5294117647% {
-    clip-path: inset(48% 0 1% 0);
-    clip-path: inset(48% 0 1% 0); }
+    clip-path: inset(68% 0 20% 0);
+    clip-path: inset(68% 0 20% 0); }
   29.4117647059% {
-    clip-path: inset(25% 0 72% 0);
-    clip-path: inset(25% 0 72% 0); }
+    clip-path: inset(68% 0 21% 0);
+    clip-path: inset(68% 0 21% 0); }
   35.2941176471% {
-    clip-path: inset(1% 0 79% 0);
-    clip-path: inset(1% 0 79% 0); }
+    clip-path: inset(24% 0 15% 0);
+    clip-path: inset(24% 0 15% 0); }
   41.1764705882% {
-    clip-path: inset(66% 0 29% 0);
-    clip-path: inset(66% 0 29% 0); }
+    clip-path: inset(74% 0 3% 0);
+    clip-path: inset(74% 0 3% 0); }
   47.0588235294% {
-    clip-path: inset(30% 0 57% 0);
-    clip-path: inset(30% 0 57% 0); }
+    clip-path: inset(78% 0 10% 0);
+    clip-path: inset(78% 0 10% 0); }
   52.9411764706% {
-    clip-path: inset(43% 0 45% 0);
-    clip-path: inset(43% 0 45% 0); }
+    clip-path: inset(40% 0 40% 0);
+    clip-path: inset(40% 0 40% 0); }
   58.8235294118% {
-    clip-path: inset(97% 0 2% 0);
-    clip-path: inset(97% 0 2% 0); }
+    clip-path: inset(19% 0 34% 0);
+    clip-path: inset(19% 0 34% 0); }
   64.7058823529% {
-    clip-path: inset(37% 0 29% 0);
-    clip-path: inset(37% 0 29% 0); }
+    clip-path: inset(73% 0 4% 0);
+    clip-path: inset(73% 0 4% 0); }
   70.5882352941% {
-    clip-path: inset(33% 0 35% 0);
-    clip-path: inset(33% 0 35% 0); }
+    clip-path: inset(14% 0 68% 0);
+    clip-path: inset(14% 0 68% 0); }
   76.4705882353% {
-    clip-path: inset(49% 0 38% 0);
-    clip-path: inset(49% 0 38% 0); }
+    clip-path: inset(68% 0 23% 0);
+    clip-path: inset(68% 0 23% 0); }
   82.3529411765% {
-    clip-path: inset(85% 0 5% 0);
-    clip-path: inset(85% 0 5% 0); }
+    clip-path: inset(31% 0 56% 0);
+    clip-path: inset(31% 0 56% 0); }
   88.2352941176% {
-    clip-path: inset(96% 0 2% 0);
-    clip-path: inset(96% 0 2% 0); }
+    clip-path: inset(12% 0 14% 0);
+    clip-path: inset(12% 0 14% 0); }
   94.1176470588% {
-    clip-path: inset(79% 0 9% 0);
-    clip-path: inset(79% 0 9% 0); }
+    clip-path: inset(100% 0 1% 0);
+    clip-path: inset(100% 0 1% 0); }
   100% {
-    clip-path: inset(23% 0 28% 0);
-    clip-path: inset(23% 0 28% 0); } }
+    clip-path: inset(71% 0 21% 0);
+    clip-path: inset(71% 0 21% 0); } }
   .title::before, .title::after {
     content: attr(data-text);
     position: absolute;
@@ -591,7 +599,7 @@
     font-family: "Mulish", sans-serif;
     font-size: 2rem;
     margin: auto;
-    writing-mode: vertical-rl;
+    writing-mode: vertical-lr;
     text-orientation: upright; }
     @media only screen and (min-width: 768px) {
       .--parallax-img p {
@@ -610,7 +618,8 @@
 @font-face {
   font-family: NeueMachina;
   src: url("../../assets/fonts/Neue-Machina-Font-Family/Neue Machina - Free for Personal Use/NeueMachina-Regular.otf");
-  font-weight: bold; }
+  font-weight: normal;
+  font-style: normal; }
 @keyframes blinker {
   50% {
     opacity: 0; } }
@@ -641,7 +650,8 @@
 @font-face {
   font-family: NeueMachina;
   src: url("../../assets/fonts/Neue-Machina-Font-Family/Neue Machina - Free for Personal Use/NeueMachina-Regular.otf");
-  font-weight: bold; }
+  font-weight: normal;
+  font-style: normal; }
 @supports (scroll-snap-type: y mandatory) {
   .scroll-container {
     height: 100vh;
@@ -698,7 +708,7 @@ section {
     height: 3px;
     width: 50px; }
   .section-header .section-title {
-    font-family: "NeueMachina";
+    font-family: "NeueMachina", serif;
     color: whitesmoke;
     font-size: 1.5rem;
     padding-left: 10px;
@@ -742,11 +752,13 @@ section {
 @font-face {
   font-family: NeueMachina;
   src: url("../../assets/fonts/Neue-Machina-Font-Family/Neue Machina - Free for Personal Use/NeueMachina-Regular.otf");
-  font-weight: bold; }
+  font-weight: normal;
+  font-style: normal; }
 @font-face {
   font-family: NeueMachina;
   src: url("../../assets/fonts/Neue-Machina-Font-Family/Neue Machina - Free for Personal Use/NeueMachina-Regular.otf");
-  font-weight: bold; }
+  font-weight: normal;
+  font-style: normal; }
 @keyframes blinker {
   50% {
     opacity: 0; } }
@@ -790,7 +802,7 @@ section {
     background: radial-gradient(circle closest-side at 85% 25%, #A1F76D 0%, rgba(0, 0, 0, 0.89) 100%), url(../../assets/svg/noise.svg);
     background-attachment: false; }
   .--about-me::after {
-    opacity: .3; }
+    opacity: 0.1; }
     @media only screen and (max-width: 576px) {
       .--about-me::after {
         background: url("../../assets/svg/lines-noise.svg") space center/cover; } }
@@ -811,11 +823,13 @@ section {
 @font-face {
   font-family: NeueMachina;
   src: url("../../assets/fonts/Neue-Machina-Font-Family/Neue Machina - Free for Personal Use/NeueMachina-Regular.otf");
-  font-weight: bold; }
+  font-weight: normal;
+  font-style: normal; }
 @font-face {
   font-family: NeueMachina;
   src: url("../../assets/fonts/Neue-Machina-Font-Family/Neue Machina - Free for Personal Use/NeueMachina-Regular.otf");
-  font-weight: bold; }
+  font-weight: normal;
+  font-style: normal; }
 @keyframes blinker {
   50% {
     opacity: 0; } }
@@ -859,7 +873,7 @@ section {
     background: radial-gradient(at 70% 0%, #A1F76D 1px, rgba(0, 0, 0, 0.89) 50%), url(../../assets/svg/noise.svg);
     background-attachment: false; }
   .--publications::after {
-    opacity: .3; }
+    opacity: 0.1; }
     @media only screen and (max-width: 576px) {
       .--publications::after {
         background: url("../../assets/svg/lines-noise.svg") space center/cover; } }
@@ -903,7 +917,8 @@ section {
 @font-face {
   font-family: NeueMachina;
   src: url("../../assets/fonts/Neue-Machina-Font-Family/Neue Machina - Free for Personal Use/NeueMachina-Regular.otf");
-  font-weight: bold; }
+  font-weight: normal;
+  font-style: normal; }
 @keyframes blinker {
   50% {
     opacity: 0; } }
@@ -934,7 +949,8 @@ section {
 @font-face {
   font-family: NeueMachina;
   src: url("../../assets/fonts/Neue-Machina-Font-Family/Neue Machina - Free for Personal Use/NeueMachina-Regular.otf");
-  font-weight: bold; }
+  font-weight: normal;
+  font-style: normal; }
 .--poems {
   height: auto;
   position: relative; }
@@ -950,7 +966,15 @@ section {
     z-index: -1; }
   .--poems::before {
     background: radial-gradient(circle closest-side at 88% 35%, #a2f76d85 13%, rgba(0, 0, 0, 0.89) 78%), url(../../assets/svg/noise.svg);
-    background-attachment: fixed; }
+    background-attachment: lines; }
+  .--poems::after {
+    opacity: 0.1; }
+    @media only screen and (max-width: 576px) {
+      .--poems::after {
+        background: url("../../assets/svg/lines-noise.svg") space center/cover; } }
+    @media only screen and (min-width: 768px) {
+      .--poems::after {
+        background: url("../../assets/svg/lines-noise.svg"), space; } }
   .--poems::before {
     height: 100%; }
   .--poems > * {
@@ -980,7 +1004,7 @@ section {
     .--poems .poem-container .poem-header {
       width: 100%; }
       .--poems .poem-container .poem-header .poem-title {
-        font-family: "NeueMachina";
+        font-family: "NeueMachina", serif;
         font-size: 2rem;
         text-align: center;
         margin: auto;
@@ -1009,7 +1033,8 @@ section {
 @font-face {
   font-family: NeueMachina;
   src: url("../../assets/fonts/Neue-Machina-Font-Family/Neue Machina - Free for Personal Use/NeueMachina-Regular.otf");
-  font-weight: bold; }
+  font-weight: normal;
+  font-style: normal; }
 @keyframes blinker {
   50% {
     opacity: 0; } }
@@ -1040,7 +1065,8 @@ section {
 @font-face {
   font-family: NeueMachina;
   src: url("../../assets/fonts/Neue-Machina-Font-Family/Neue Machina - Free for Personal Use/NeueMachina-Regular.otf");
-  font-weight: bold; }
+  font-weight: normal;
+  font-style: normal; }
 .--contact-form {
   position: relative;
   height: auto;
@@ -1058,6 +1084,14 @@ section {
   .--contact-form::before {
     background: radial-gradient(circle closest-side at 15% 45%, #A1F76D 0%, rgba(0, 0, 0, 0.89) 100%), url(../../assets/svg/noise.svg);
     background-attachment: false; }
+  .--contact-form::after {
+    opacity: 0.1; }
+    @media only screen and (max-width: 576px) {
+      .--contact-form::after {
+        background: url("../../assets/svg/lines-noise.svg") space center/cover; } }
+    @media only screen and (min-width: 768px) {
+      .--contact-form::after {
+        background: url("../../assets/svg/lines-noise.svg"), space; } }
   .--contact-form::before {
     height: auto; }
 
@@ -1073,7 +1107,7 @@ section {
       color: whitesmoke;
       font-size: 1rem;
       font-weight: bold;
-      font-family: "NeueMachina";
+      font-family: "NeueMachina", serif;
       height: 119.6px; }
     .contact-form > div > input[type="text"],
     .contact-form > div > input[type="email"],

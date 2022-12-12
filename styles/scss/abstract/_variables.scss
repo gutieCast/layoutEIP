@@ -1,4 +1,15 @@
+//FONTS
 @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@font-face {
+  font-family: NeueMachina;
+  src: url('../../assets/fonts/Neue-Machina-Font-Family/Neue Machina - Free for Personal Use/NeueMachina-Regular.otf');
+  font-weight: normal;
+  font-style: normal;
+};
+
+$font-normal: 'Mulish', sans-serif;
+$font-title: 'NeueMachina', serif;
 
 // COLOR
 $purple: #391EFF;
@@ -12,16 +23,6 @@ $s-lg: 30px;
 $s-xl: 15rem;
 
 $hHeader: 50px;
-//FONTS
-
-@font-face {
-    font-family: NeueMachina;
-    src: url('../../assets/fonts/Neue-Machina-Font-Family/Neue Machina - Free for Personal Use/NeueMachina-Regular.otf');
-    font-weight: bold;
-  }
-
-$font-normal: 'Mulish', sans-serif;
-$font-title: 'NeueMachina';
 
 $size-xxs: 0.35rem;
 $size-xs: 0.5rem;

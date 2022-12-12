@@ -48,7 +48,7 @@
   }
   @if $lines {
     &::after {
-      opacity: .3;
+      opacity: 0.1;
       @include b-sm {
         background: url('../../assets/svg/lines-noise.svg') space center/cover;
       }
@@ -60,7 +60,7 @@
 }
 
 @mixin purpleBg ($z-index, $opacity: false) {
-  background: #391eff url("../../assets/svg/circuit.svg") space center/cover;
+  background: #391eff url("../../assets/svg/circuit.svg") no-repeat center/cover;
   opacity: $opacity;
   z-index: $z-index;
   @include noise(

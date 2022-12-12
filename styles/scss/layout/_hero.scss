@@ -18,6 +18,7 @@
 .title {
   color: whitesmoke;
   font-family: $font-title;
+  // font-weight: bold;
   font-size: $size-l;
   letter-spacing: 0.5rem;
   @include textGlitch(
@@ -85,7 +86,7 @@
     font-family: $font-normal;
     font-size: 2rem;
     margin: auto;
-    writing-mode: vertical-rl;
+    writing-mode: vertical-lr;
     text-orientation: upright;
     @include b-md {
      margin-top: #{$hHeader * 3};

@@ -7,7 +7,8 @@
         circle closest-side at 15% 45%,
         $green 0%,
         rgba(0, 0, 0, 0.89) 100%
-      )
+        ),
+        $lines: true
     );
   height: auto;
   padding: 0 0 $s-lg 0;
